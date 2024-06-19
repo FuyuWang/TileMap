@@ -88,7 +88,7 @@ def run():
                                                  [{'name': 'Weights', 'projection': [[['H']], [['K']], [['N']]]},
                                                   {'name': 'Inputs', 'projection': [[['H']], [['M']], [['K']]]},
                                                   {'name': 'Outputs', 'projection': [[['H']], [['M']], [['N']]],
-                                                   'read-write': True}],
+                                                   }],
                                              'dimensions': ['H', 'M', 'K', 'N'], 'name': 'bmm'}}}
             # input_sizes = [1, 4, 16, 64, 256, 1024]
             input_sizes = [1]

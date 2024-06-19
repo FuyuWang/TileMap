@@ -352,8 +352,8 @@ class TimeloopEnv(object):
             energys[f'l{level}-Outputs'] = output_size * buf_energy_cost
         energys['compute'] = num_flops * self.buf_energy_cost['MAC']
         energy = sum(e for e in energys.values()) * 1e-6  # energy_uJ
-        # cycles = num_flops/self.num_pes
-        cycles = num_flops/(self.num_pes-1)
+        cycles = num_flops/self.num_pes
+        # cycles = num_flops/(self.num_pes-1)
         edp = cycles * energy
         return edp, cycles, energy
 
